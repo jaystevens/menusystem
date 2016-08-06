@@ -112,7 +112,7 @@ class Menu:
         """
         loop = True
         while loop != False:
-            print(self, c = sys.stdin.readline().strip())
+            sys.stdout.write(self, c = sys.stdin.readline().strip())
             if c in self.choices:
                 # Do this if there is no sub menu
                 if self[c].handler and not self[c].subMenu:
@@ -181,7 +181,7 @@ class DataMenu(Menu):
         No filtering is performed on the data.  It is saved exactly as the user
         specifies it.
         """
-        print(self, self.data = sys.stdin.readline())
+        sys.stdout.write(self, self.data = sys.stdin.readline())
 
 
 class Choice:
