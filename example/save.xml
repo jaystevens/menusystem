@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<menu prompt="Select Choice.&gt; " title="Main Menu">
+	<choice description="Do Noting Some" handler="print_ok" selector="1" value="1"/>
+	<choice description="Do Noting More" handler="None" selector="2" value="2"/>
+	<choice description="Do Noting Alot" handler="print_bad" selector="3" value="3"/>
+	<choice description="Sub Menu" handler="None" selector="4" value="4">
+		<menu prompt="Select Choice.&gt; " title="Sub Menu">
+			<choice description="Sub Menu Do Noting Some" handler="print_ok" selector="1" value="1"/>
+			<choice description="Sub Menu Do Noting More" handler="print_ok" selector="2" value="2"/>
+			<choice description="Sub Menu Do Noting Alot" handler="print_bad" selector="3" value="3"/>
+			<choice description="Return to Main Menu" handler="done" selector="4" value="4"/>
+		</menu>
+	</choice>
+	<choice description="Exit" handler="done" selector="5" value="5"/>
+</menu>
