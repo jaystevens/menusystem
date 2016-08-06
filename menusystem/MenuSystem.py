@@ -112,8 +112,8 @@ class Menu:
 		"""
 		loop = True
 		while loop != False:
-			print self,
 			c = sys.stdin.readline().strip()
+			print self, c
 			if c in self.choices:
 				# Do this if there is no sub menu
 				if self[c].handler and not self[c].subMenu:
