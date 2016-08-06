@@ -7,25 +7,25 @@ Copyright: July 9, 2006
 
 # Handler functions
 def save_name(data):
-	print 'Name: %s' % data
+    print 'Name: %s' % data
 
 def save_phone(data):
-	print 'Phone: %s' % data
+    print 'Phone: %s' % data
 
 def save_street(data):
-	print 'Street: %s' % data
+    print 'Street: %s' % data
 
 def save_city(data):
-	print 'Phone: %s' % data
+    print 'Phone: %s' % data
 
 def save_state(data):
-	print 'Phone: %s' % data
+    print 'Phone: %s' % data
 
 def save_zip(data):
-	print 'Phone: %s' % data
+    print 'Phone: %s' % data
 
 def done(value):
-	return False
+    return False
 
 # Create Sub Menu
 lst = []
@@ -48,16 +48,16 @@ lst.append(menusystem.Choice(selector=0, value=0, handler=done, description='Exi
 
 # Creat Menu & Begin Execution
 head = menusystem.Menu(title='Information Editor', choice_list=lst, prompt='What do you want to do? ')
-	
+    
 if __name__ == '__main__':
-	"""If your menu functions are in the same file you must use the if __name__ check
-	or it will appear that you menus are executed twice"""
-	head.waitForInput()
-	
-	"""Save Menu To XML"""
-	# Save Menu
-	xml = menusystem.XMLMenuGenie('save.xml', 'example')
-	xml.save(head)
+    """If your menu functions are in the same file you must use the if __name__ check
+    or it will appear that you menus are executed twice"""
+    head.waitForInput()
+    
+    """Save Menu To XML"""
+    # Save Menu
+    xml = menusystem.XMLMenuGenie('save.xml', 'example')
+    xml.save(head)
 
-	head2 = xml.load()
-	head2.waitForInput()
+    head2 = xml.load()
+    head2.waitForInput()
