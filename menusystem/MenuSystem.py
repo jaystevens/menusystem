@@ -122,7 +122,7 @@ class Menu:
 				if self[c].subMenu:
 					self[c].subMenu.waitForInput()
 					if self[c].handler:
-						loop = self[c].handler(self[c].subMenu.data)
+						loop = self[c].handler((hasattr(self[c].subMenu, 'data')) and self[c].subMenu.data or None)
 
 
 class DataMenu(Menu):

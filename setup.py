@@ -1,9 +1,9 @@
 from distutils.core import setup
 
 setup(name='MenuSystem',
-	version='1.1',
+	version='1.3',
 	author='Daniel Mikusa',
-	author_email='dan@trz.cc',
+	author_email='dan@mikusa.com',
 	url='http://www.mikusa.com/menu_system/',
 	description='Build Text Based Menus Easily',
 	long_description=None,

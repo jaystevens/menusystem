@@ -103,7 +103,7 @@ class XMLMenuGenie(menusystem.MenuGenie):
 		choice_list = []
 		for child in [x for x in head.childNodes if isinstance(x, xml.dom.minidom.Element) and x.tagName.lower() == 'choice']:
 			c = menusystem.Choice()
-			c.selector = int(child.getAttribute('selector'))
+			c.selector = child.getAttribute('selector')
 			c.description = child.getAttribute('description')
 			c.value = child.getAttribute('value')
 			handler_name = child.getAttribute('handler')

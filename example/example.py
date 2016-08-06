@@ -1,5 +1,4 @@
-import menusystem, sys
-sys.path.append('../')
+import menusystem
 """A simple example of the Menu System in action
 
    Author: Daniel Mikusa <dan@trz.cc>
