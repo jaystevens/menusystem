@@ -57,7 +57,7 @@ if __name__ == '__main__':
 	
 	"""Save Menu To XML"""
 	# Save Menu
-	xml = menusystem.XMLMenuGenie('save.xml', 'example2')
+	xml = menusystem.XMLMenuGenie('save.xml', 'example')
 	xml.save(head)
 
 	head2 = xml.load()
