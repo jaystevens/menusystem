@@ -1,7 +1,7 @@
 from distutils.core import setup
 
 setup(name='MenuSystem',
-	version='1.0',
+	version='1.1',
 	author='Daniel Mikusa',
 	author_email='dan@trz.cc',
 	url='http://www.mikusa.com/menu_system/',
