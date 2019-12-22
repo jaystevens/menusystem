@@ -16,7 +16,7 @@ License along with this library; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 """
 import sys, xml.dom.minidom
-import menusystem
+from . import menusystem
 """Menu System
 
    Author:  Daniel Mikusa <dan@trz.cc>
@@ -140,7 +140,7 @@ class XMLMenuGenie(menusystem.MenuGenie):
             self.doc.writexml(fp,addindent='\t', newl='\n')
             fp.close()
         else:
-            print 'Unable to output xml'
+            print('Unable to output xml')
         self.doc.unlink()
         
     def _save(self, menu):
@@ -163,7 +163,7 @@ class XMLMenuGenie(menusystem.MenuGenie):
                 c.setAttribute('description', str(choice.description))
                 c.setAttribute('value', str(choice.value))
                 if choice.handler:
-                    c.setAttribute('handler', choice.handler.func_name)
+                    c.setAttribute('handler', choice.handler.__name__)
                 else:
                     c.setAttribute('handler', 'None')
                 if choice.subMenu:
@@ -207,9 +207,9 @@ class XMLMenuGenie(menusystem.MenuGenie):
             return self.loc
         
         if mode == 'r':
-            import urllib
+            import urllib.request, urllib.parse, urllib.error
             try:
-                return urllib.urlopen(self.loc)
+                return urllib.request.urlopen(self.loc)
             except (IOError, OSError):
                 pass
         
@@ -219,7 +219,7 @@ class XMLMenuGenie(menusystem.MenuGenie):
             pass
 
         if type(self.loc) == str:
-            import StringIO
-            return StringIO.StringIO(self.loc)
+            import io
+            return io.StringIO(self.loc)
             
         return None

@@ -7,22 +7,22 @@ Copyright: July 9, 2006
 
 # Handler functions
 def save_name(data):
-    print 'Name: %s' % data
+    print('Name: %s' % data)
 
 def save_phone(data):
-    print 'Phone: %s' % data
+    print('Phone: %s' % data)
 
 def save_street(data):
-    print 'Street: %s' % data
+    print('Street: %s' % data)
 
 def save_city(data):
-    print 'Phone: %s' % data
+    print('Phone: %s' % data)
 
 def save_state(data):
-    print 'Phone: %s' % data
+    print('Phone: %s' % data)
 
 def save_zip(data):
-    print 'Phone: %s' % data
+    print('Phone: %s' % data)
 
 def done(value):
     return False
