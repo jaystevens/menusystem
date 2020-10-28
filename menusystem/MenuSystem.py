@@ -112,7 +112,7 @@ class Menu:
         """
         loop = True
         while loop != False:
-            print(self)
+            print(self, end='')
             c = sys.stdin.readline().strip()
             if c in self.choices:
                 # Do this if there is no sub menu
